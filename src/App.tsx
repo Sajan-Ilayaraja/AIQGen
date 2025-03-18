@@ -30,7 +30,7 @@ function App() {
 
   // Function to call Google AI Studio API for question generation
   const generateQuestionsWithGoogleAI = async (text: string) => {
-    const apiKey = "AIzaSyDZO_vUYksKm91-FkEu_cIFNiAc1_5wtbQ"; // Replace with your Google AI Studio API key
+    const apiKey = process.env.REACT_APP_GOOGLE_AI_API_KEY; // Replace with your Google AI Studio API key
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
     if (!apiKey) {
